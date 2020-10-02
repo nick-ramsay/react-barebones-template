@@ -1,7 +1,5 @@
 const express = require("express");
 
-//const routes = require("./routes");
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -15,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //Setting headers for CORS Policies
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Credentials");
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
@@ -23,11 +21,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-// Add routes, both API and view 
-//app.use(routes);
-
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
