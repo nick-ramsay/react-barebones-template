@@ -1,4 +1,4 @@
-# react-mongo-template
+# react-barebones-template
 
 This a a very simple application using React and Express.
 
